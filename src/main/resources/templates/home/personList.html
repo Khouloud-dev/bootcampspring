@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Person List Page</title>
+</head>
+<body>
+	<h2 align="center">Person List</h2>
+	<ul>
+		<li th:each="name: ${names}" th:text="${name}"></li>
+	</ul>
+	<a th:href="@{addPerson}">Go to "Add Person"</a>
+	
+
+     <table border="2" style="margin-top:20px;">
+     <tr><td style="background-color:yellow;">First Name</td><td style="background-color:pink;">Last Name</td></tr>
+     <tr th:each="person: ${persons}"><td  th:text="${person.firstName}"></td><td th:text="${person.lastName}"></td></tr>
+     
+     </table>
+
+
+</body>
+</html>

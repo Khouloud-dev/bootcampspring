@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<title>Insert title here</title>
+</head>
+<body>
+<h1 align="center">Create Parson</h1>
+
+   <table  style="margin-top:20px;">
+   <form th:action="@{/addPerson}" th:object="${personform}" method="POST">
+     <tr>
+        <td>First Name : </td>
+        <td> <input type="text" th:field="*{firstName}" /></td>
+     </tr>
+     <tr>
+        <td>Last Name : </td>
+        <td> <input type="text" th:field="*{lastName}" /></td>
+      </tr>
+      <tr>
+        <td><input type="submit" value="Create" /></td>
+        <td></td>
+      </tr>
+     </form>
+     </table>
+    
+     
+    
+     <h3 style="color:red" th:text="${errormsg}"></h3>
+       
+               
+              
+         
+         
+      
+     
+     
+</body>
+</html>
