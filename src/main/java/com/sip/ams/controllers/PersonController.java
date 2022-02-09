@@ -30,6 +30,11 @@ static {
     @Value("${error.message}")
     private String errormsg;
     
+    @GetMapping("/")
+	public String redirect(Model model) {
+    	model.addAttribute("persons",person);
+	    return "home/personList";
+	}
     
     @GetMapping("/personList")
 	public String fnpersonsList(Model model) {
